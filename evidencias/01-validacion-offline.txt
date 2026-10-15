@@ -28,11 +28,15 @@
 [OK] graph.py: grafo.add_conditional_edges(
 [OK] graph.py: app: Orquestador = grafo.compile()
 [OK] rag.py: INDEX_NAME = "techcorp-rag-hibrido"
+[OK] rag.py: os.getenv("INDEX_NAME")
 [OK] rag.py: NAMESPACE = "politicas-internas"
+[OK] rag.py: EMBEDDING_MODEL = "text-embedding-3-small"
+[OK] rag.py: EMBEDDING_DIM = 1536
 [OK] rag.py: class RAGSystem:
 [OK] rag.py: def obtener_top_k(self, query: str)
 [OK] rag.py: EnsembleRetriever
-[OK] main.py: acumul├│ en total
+[OK] rag.py: No se reingesta.
+[OK] main.py: acumuló en total
 [OK] main.py: stream_mode="updates"
 [OK] main.py: app.invoke(estado_inicial(texto))
 [OK] main.py: RESPUESTA FINAL:
@@ -41,17 +45,19 @@
 [OK] README.md: ```mermaid
 [OK] README.md: ![Grafo del orquestador](grafo.png)
 [OK] un solo StateGraph - graph.py
-[OK] sin claves en el c├│digo
+[OK] sin claves en el código
 [OK] .gitignore excluye .env
 [OK] grafo.mmd es el del grafo
 [OK] git ls-files sin .env ni .venv - 46 archivos
-Flujo de delegaci├│n:
+RAG: local (no hay PINECONE_API_KEY): BM25 + memoria
+
+Flujo de delegación:
 
 Nodo: supervisor
    next_agent: investigador
 
 Nodo: investigador
-   [investigador] 14 d├¡as, 21 d├¡as y 28 d├¡as. [Fuente: politica_vacaciones.txt]
+   [investigador] 14 días, 21 días y 28 días. [Fuente: politica_vacaciones.txt]
 
 Nodo: supervisor
    next_agent: analista
@@ -63,11 +69,11 @@ Nodo: supervisor
    next_agent: FINISH
 
 Nodo: sintesis
-   [supervisor] En 12 a├▒os acumul├│ 231 d├¡as de vacaciones.
+   [supervisor] En 12 años acumuló 231 días de vacaciones.
 
 RESPUESTA FINAL:
 
-En 12 a├▒os acumul├│ 231 d├¡as de vacaciones.
+En 12 años acumuló 231 días de vacaciones.
 [OK] demo: investigador, analista y sintesis
 [OK] demo: respuesta final
 [OK] validacion

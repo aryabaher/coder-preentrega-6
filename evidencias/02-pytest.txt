@@ -6,14 +6,14 @@ configfile: pytest.ini
 testpaths: tests
 plugins: anyio-4.15.1, langsmith-0.14.8, platformdirs-4.13.0, asyncio-1.4.0
 asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
-collected 49 items
+collected 54 items
 
-tests\test_errores.py ..............                                     [ 28%]
-tests\test_grafo.py ..........                                           [ 48%]
-tests\test_herramientas.py ...........                                   [ 71%]
-tests\test_main.py ...                                                   [ 77%]
-tests\test_requisitos.py ........                                        [ 93%]
+tests\test_errores.py ..............                                     [ 25%]
+tests\test_grafo.py ..........                                           [ 44%]
+tests\test_herramientas.py ................                              [ 74%]
+tests\test_main.py ...                                                   [ 79%]
+tests\test_requisitos.py ........                                        [ 94%]
 tests\test_state.py ...                                                  [100%]
 
-============================= 49 passed in 4.03s ==============================
+============================= 54 passed in 3.86s ==============================
 (exit code: 0)

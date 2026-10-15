@@ -280,7 +280,7 @@ Con `LLM_PROVIDER=openai` el mensaje nombra `OPENAI_API_KEY`. Con `anthropic`, `
 
 **Mensaje:** `Solicitud inválida: texto: String should have at least 1 character`
 
-**Cómo reproducirlo:** `python main.py "   "`. No llega al grafo.
+**Cómo reproducirlo:** `python main.py "   "` (`evidencias/07-error-solicitud-vacia.txt`). No llega al grafo.
 
 **Tests:** `test_pregunta_vacia_no_llega_al_grafo` · `test_main_con_pregunta_vacia_sale_con_error`
 
@@ -335,7 +335,7 @@ No se reintenta.
 
 ```text
 python -m pytest -v
-============================= 49 passed in 4.03s ==============================
+============================= 54 passed in 3.86s ==============================
 ```
 
 ## Evidencias
@@ -349,6 +349,7 @@ python -m pytest -v
 | `evidencias/04-main-openai.txt`          | `python main.py` contra el modelo real       |
 | `evidencias/05-max-pasos.txt`            | `python experimento_pasos.py`, sin API       |
 | `evidencias/06-error-401-sin-clave.txt`  | `python main.py` sin clave                   |
+| `evidencias/07-error-solicitud-vacia.txt` | `python main.py "   "`                      |
 | `evidencias/08-python-311-rechazado.txt` | `py -3.11 main.py`                           |
 | `grafo.png`                              | `draw_mermaid_png()`                         |
 | `demo_delegacion.ipynb`                  | La misma delegación, celda por celda |

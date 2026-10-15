@@ -1,7 +1,7 @@
 > python experimento_pasos.py
 MAX_PASOS = 6
-veces que el supervisor pidi├│ al investigador: 6
-veces que el investigador corri├│: 6
+veces que el supervisor pidió al investigador: 6
+veces que el investigador corrió: 6
 pasos en el estado: 6
 task_completed: True
 cierre: supervisor

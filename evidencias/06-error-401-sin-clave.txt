@@ -1,4 +1,6 @@
 > python main.py   (sin GOOGLE_API_KEY)
+RAG: local (no hay PINECONE_API_KEY): BM25 + memoria
+
 Flujo de delegación:
 
 Error controlado: 401/key: falta GOOGLE_API_KEY en las variables de entorno. Copiá .env.example a .env y cargá la clave. No se reintenta.

@@ -1,39 +1,40 @@
 > python main.py
-Flujo de delegaci├│n:
+RAG: Pinecone índice=techcorp-rag-hibrido namespace=politicas-internas vectores=9, no se reingesta
+
+Flujo de delegación:
 
 Nodo: supervisor
    next_agent: investigador
 
 Nodo: investigador
-   [investigador] En TechCorp, un empleado acumula d├¡as de vacaciones de la siguiente manera:
+   [investigador] En TechCorp, un empleado acumula:
 
-- **Primeros 5 a├▒os**: 14 d├¡as de vacaciones por a├▒o.
-- **Siguientes 5 a├▒os (de 5 a 10 a├▒os de antig├╝edad)**: 21 d├¡as de vacaciones por a├▒o.
-- **Despu├®s de 10 a├▒os**: 28 d├¡a
+- **14 días de vacaciones** por año durante los primeros 5 años.
+- **21 días de vacaciones** por año durante los siguientes 5 años (de 6 a 10 años de antigüedad).
+- **28 días de vacaciones** por año después de cumpl
 
 Nodo: supervisor
    next_agent: analista
 
 Nodo: analista
-   [analista] El total acumulado de d├¡as de vacaciones para un empleado que cumple 12 a├▒os en TechCorp es de **231 d├¡as**.
+   [analista] El total de días de vacaciones acumulados en 12 años es de **231 días**.
 
 Nodo: supervisor
    next_agent: FINISH
 
 Nodo: sintesis
-   [supervisor] Un empleado que cumple 12 a├▒os en TechCorp acumula un total de 231 d├¡as de vacaciones. Esto se desglosa de la siguiente manera:
+   [supervisor] En TechCorp, un empleado acumula días de vacaciones de la siguiente manera:
 
-- **Primeros 5 a├▒os**: 5 a├▒os x 14 d├¡as = 70 d├¡as
-- **Siguientes 5 a├▒os**: 5 a├▒os x 21 d├¡as = 105 d├¡as
-- **├Ültimos 2 a├▒os
+- **14 días** por año durante los primeros 5 años: 5 años x 14 días = **70 días**.
+- **21 días** por año durante los siguientes 5 años (de 6 a 10 años): 5 años x 21 días = *
 
 RESPUESTA FINAL:
 
-Un empleado que cumple 12 a├▒os en TechCorp acumula un total de 231 d├¡as de vacaciones. Esto se desglosa de la siguiente manera:
+Un empleado que cumple 12 años en TechCorp acumula un total de **231 días de vacaciones**. Esto se desglosa de la siguiente manera:
 
-- **Primeros 5 a├▒os**: 5 a├▒os x 14 d├¡as = 70 d├¡as
-- **Siguientes 5 a├▒os (a├▒os 6 a 10)**: 5 a├▒os x 21 d├¡as = 105 d├¡as
-- **A├▒os 11 y 12**: 2 a├▒os x 28 d├¡as = 56 d├¡as
+- Durante los primeros 5 años: 5 años x 14 días = 70 días.
+- En los siguientes 5 años: 5 años x 21 días = 105 días.
+- En los últimos 2 años: 2 años x 28 días = 56 días.
 
-Sumando todo: 70 + 105 + 56 = 231 d├¡as de vacaciones acumulados.
+Sumando todo: 70 + 105 + 56 = 231 días.
 (exit code: 0)

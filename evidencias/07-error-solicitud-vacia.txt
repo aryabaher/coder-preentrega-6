@@ -1,3 +1,5 @@
 > python main.py "   "
+RAG: local (no hay PINECONE_API_KEY): BM25 + memoria
+
 Error controlado: Solicitud inválida: texto: String should have at least 1 character
 (exit code: 1)
