@@ -1,0 +1,74 @@
+> python validacion.py
+[OK] Python 3.12+ - 3.12.10
+[OK] state.py: class AgentState(MessagesState):
+[OK] state.py: contribuciones: Annotated[List[Dict[str, str]], operator.add]
+[OK] state.py: next_agent: Optional[str]
+[OK] state.py: task_completed: bool
+[OK] agents/research_agent.py: def buscar_en_politicas_internas(pregunta: str) -> str:
+[OK] agents/research_agent.py: agente_investigador = create_agent(
+[OK] agents/research_agent.py: def nodo_investigador(state: AgentState) -> dict[str, Any]:
+[OK] agents/research_agent.py: state["messages"][-1].content  # contexto acotado, no todo el historial
+[OK] agents/research_agent.py: name="investigador"
+[OK] agents/analyst_agent.py: def calculadora(expresion: str) -> str:
+[OK] agents/analyst_agent.py: def _evaluar_nodo(nodo: ast.expr) -> int | float:
+[OK] agents/analyst_agent.py: agente_analista = create_agent(
+[OK] agents/analyst_agent.py: def nodo_analista(state: AgentState) -> dict[str, Any]:
+[OK] graph.py: MAX_PASOS = 6
+[OK] graph.py: class DecisionSupervisor(BaseModel):
+[OK] graph.py: next: Literal["investigador", "analista", "FINISH"]
+[OK] graph.py: def nodo_supervisor(state: AgentState) -> dict[str, Any]:
+[OK] graph.py: with_structured_output(DecisionSupervisor)
+[OK] graph.py: def enrutar(state: AgentState) -> Literal["investigador", "analista", "sintesis"]:
+[OK] graph.py: def nodo_sintesis(state: AgentState) -> dict[str, Any]:
+[OK] graph.py: grafo = StateGraph(AgentState)
+[OK] graph.py: grafo.add_node("supervisor", nodo_supervisor)
+[OK] graph.py: grafo.add_node("investigador", nodo_investigador)
+[OK] graph.py: grafo.add_node("analista", nodo_analista)
+[OK] graph.py: grafo.add_node("sintesis", nodo_sintesis)
+[OK] graph.py: grafo.add_conditional_edges(
+[OK] graph.py: app: Orquestador = grafo.compile()
+[OK] rag.py: INDEX_NAME = "techcorp-rag-hibrido"
+[OK] rag.py: NAMESPACE = "politicas-internas"
+[OK] rag.py: class RAGSystem:
+[OK] rag.py: def obtener_top_k(self, query: str)
+[OK] rag.py: EnsembleRetriever
+[OK] main.py: acumul├│ en total
+[OK] main.py: stream_mode="updates"
+[OK] main.py: app.invoke(estado_inicial(texto))
+[OK] main.py: RESPUESTA FINAL:
+[OK] README.md: Requisito: Python 3.12 o superior
+[OK] README.md: py -3.12 -m venv .venv
+[OK] README.md: ```mermaid
+[OK] README.md: ![Grafo del orquestador](grafo.png)
+[OK] un solo StateGraph - graph.py
+[OK] sin claves en el c├│digo
+[OK] .gitignore excluye .env
+[OK] grafo.mmd es el del grafo
+[OK] git ls-files sin .env ni .venv - 46 archivos
+Flujo de delegaci├│n:
+
+Nodo: supervisor
+   next_agent: investigador
+
+Nodo: investigador
+   [investigador] 14 d├¡as, 21 d├¡as y 28 d├¡as. [Fuente: politica_vacaciones.txt]
+
+Nodo: supervisor
+   next_agent: analista
+
+Nodo: analista
+   [analista] Resultado: 231
+
+Nodo: supervisor
+   next_agent: FINISH
+
+Nodo: sintesis
+   [supervisor] En 12 a├▒os acumul├│ 231 d├¡as de vacaciones.
+
+RESPUESTA FINAL:
+
+En 12 a├▒os acumul├│ 231 d├¡as de vacaciones.
+[OK] demo: investigador, analista y sintesis
+[OK] demo: respuesta final
+[OK] validacion
+(exit code: 0)

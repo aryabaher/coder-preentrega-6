@@ -1,0 +1,19 @@
+> python -m pytest -v
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Software\Coder\coder-preentrega-6
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.15.1, langsmith-0.14.8, platformdirs-4.13.0, asyncio-1.4.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+collected 49 items
+
+tests\test_errores.py ..............                                     [ 28%]
+tests\test_grafo.py ..........                                           [ 48%]
+tests\test_herramientas.py ...........                                   [ 71%]
+tests\test_main.py ...                                                   [ 77%]
+tests\test_requisitos.py ........                                        [ 93%]
+tests\test_state.py ...                                                  [100%]
+
+============================= 49 passed in 4.03s ==============================
+(exit code: 0)

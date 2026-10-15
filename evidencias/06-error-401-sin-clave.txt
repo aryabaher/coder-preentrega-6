@@ -1,0 +1,5 @@
+> python main.py   (sin GOOGLE_API_KEY)
+Flujo de delegación:
+
+Error controlado: 401/key: falta GOOGLE_API_KEY en las variables de entorno. Copiá .env.example a .env y cargá la clave. No se reintenta.
+(exit code: 1)

@@ -1,0 +1,10 @@
+[project]
+name = "coder-preentrega-6"
+version = "1.0.0"
+description = "Orquestador multi-agente jerárquico con LangGraph: supervisor, investigador, analista, validación y síntesis."
+requires-python = ">=3.12"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+exclude = ["^\\.venv/"]

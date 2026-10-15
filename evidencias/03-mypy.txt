@@ -1,0 +1,3 @@
+> python -m mypy .
+Success: no issues found in 22 source files
+(exit code: 0)
